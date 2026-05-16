@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventFlow</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="background-glow"></div>
+
+    <div class="container">
+      <!-- HERO -->
+      <header class="hero">
+        <div class="hero-text">
+          <p class="tag">Modern Event Planner</p>
+
+          <h1>EventFlow</h1>
+
+          <p class="description">
+            Create stylish events, invite guests personally and allow attendees
+            to join your event in a beautiful modern experience.
+          </p>
+        </div>
+
+        <button class="hero-button">Create Event</button>
+      </header>
+
+      <!-- MAIN -->
+      <main class="main-grid">
+        <!-- LEFT -->
+        <section class="left-column">
+          <!-- EVENT DETAILS -->
+          <div class="card">
+            <h2>Event Details</h2>
+
+            <div class="input-grid">
+              <div>
+                <label>Event Name</label>
+                <input
+                  type="text"
+                  id="eventName"
+                  placeholder="Purple Night Festival"
+                />
+              </div>
+
+              <div>
+                <label>Event Date</label>
+                <input type="date" id="eventDate" />
+              </div>
+            </div>
+
+            <div class="spacing-top">
+              <label>Event Description</label>
+
+              <textarea
+                id="eventDescription"
+                rows="5"
+                placeholder="Describe your event..."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- INVITE -->
+          <div class="card invite-card">
+            <div class="invite-header">
+              <div>
+                <h2>Personalized Invite</h2>
+                <p>Create a custom invitation message for your guests.</p>
+              </div>
+            </div>
+
+            <textarea
+              id="inviteMessage"
+              rows="6"
+              placeholder="Hi Sarah, we would love to invite you to our special event..."
+            ></textarea>
+
+            <button class="primary-button invite-button">
+              Send Invite
+            </button>
+          </div>
+        </section>
+
+        <!-- RIGHT -->
+        <aside class="card sidebar">
+          <div class="sidebar-header">
+            <div>
+              <h2>Join Event</h2>
+              <p>Register your attendance</p>
+            </div>
+
+            <div class="people-counter">
+              <span id="guestCount">0</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="John" />
+          </div>
+
+          <div class="form-group">
+            <label>Surname</label>
+            <input type="text" id="surname" placeholder="Doe" />
+          </div>
+
+          <button class="primary-button register-button" id="registerBtn">
+            Register
+          </button>
+
+          <div class="guest-section">
+            <div class="guest-header">
+              <h3>Guest List</h3>
+            </div>
+
+            <div id="guestList" class="guest-list"></div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
